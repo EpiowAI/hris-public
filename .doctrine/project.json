@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "repo": "EpiowAI/hris-public",
+    "name": "hris-public",
+    "lifecycle": "incubating",
+    "layer": "other",
+    "summary": "Incubating placeholder for a public HRIS-related project with no implementation or production surface declared yet.",
+    "goals": [
+      "Provide a doctrine-compatible entry point for future project initialization.",
+      "Require concrete project goals, boundaries, public surfaces, and delivery proof before production work starts."
+    ],
+    "nonGoals": [
+      "Do not treat this placeholder as a production HRIS product.",
+      "Do not infer data models, integrations, deployment paths, or commercial commitments from the repository name alone."
+    ]
+  },
+  "boundaries": {
+    "owns": [
+      {
+        "name": "project-initialization-metadata",
+        "description": "Doctrine adapter, project manifest, and placeholder project orientation for an otherwise empty repository."
+      }
+    ],
+    "doesNotOwn": [
+      "HRIS domain behavior, customer data processing, auth, billing, deployment, or public API behavior until explicitly declared."
+    ],
+    "publicSurfaces": [
+      {
+        "type": "documentation",
+        "name": "Project orientation",
+        "location": "PROJECT.md"
+      },
+      {
+        "type": "manifest",
+        "name": "Project manifest",
+        "location": ".doctrine/project.json"
+      }
+    ],
+    "allowedDependencies": [
+      {
+        "repo": "SylphxAI/doctrine",
+        "surface": "central standards and project manifest schema",
+        "direction": "downward"
+      }
+    ],
+    "forbiddenCouplings": [
+      "Do not import or assume another repository's HRIS internals.",
+      "Do not add production behavior until the owning project boundary is declared."
+    ]
+  },
+  "documentation": {
+    "adr": {
+      "path": "docs/adr/",
+      "status": "planned"
+    },
+    "specs": {
+      "path": "docs/specs/",
+      "status": "planned"
+    },
+    "catalog": {
+      "path": ".doctrine/project.json",
+      "status": "present"
+    },
+    "runbooks": {
+      "path": "docs/runbooks/",
+      "status": "planned"
+    },
+    "generatedReferences": {
+      "path": "docs/reference/",
+      "status": "planned"
+    }
+  },
+  "delivery": {
+    "ciModel": "none",
+    "requiredContexts": [],
+    "deployPath": "not-applicable: no implementation or deployment path is declared yet",
+    "productionProof": "not-applicable: no production surface is declared yet",
+    "recoveryClass": "not-applicable"
+  },
+  "commercial": {
+    "status": "not-applicable",
+    "decisionHome": "not-applicable: no commercial decision surface declared for this placeholder",
+    "pricingSourceOfTruth": "not-applicable: no pricing declared",
+    "metricsSourceOfTruth": "not-applicable: no product metrics declared",
+    "requiredRecords": [
+      "none"
+    ],
+    "guardrails": [
+      "Any future pricing, packaging, roadmap, or commercial experiment requires a Commercial ADR."
+    ]
+  },
+  "adoption": {
+    "status": "baseline",
+    "gaps": [
+      {
+        "id": "project-purpose-boundary-undeclared",
+        "description": "The repository is initialized, but concrete product goal, owner boundary, delivery path, and production proof remain undeclared.",
+        "owner": "EpiowAI/hris-public",
+        "target": "before production implementation"
+      }
+    ]
+  }
+}
