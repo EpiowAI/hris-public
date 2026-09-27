@@ -26,6 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Verify static owned runner profiles
+        env:
+          REPO_PRIVATE: ${{ github.event.repository.private }}
         run: bash scripts/check-owned-runner-profiles.sh
       - name: Require PROJECT.md
         run: test -f PROJECT.md && wc -l PROJECT.md
